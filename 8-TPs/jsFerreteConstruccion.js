@@ -29,10 +29,21 @@ function Materiales ()
 {
 	var largo;
 	var ancho;
-	var resultado;
+	var cemento;
+	var cantidadCe;
+	var cal;
+	var cantidadCa;
+
+	cemento=2;
+	cal=3;
+
 	largo=document.getElementById('Largo').value;
-	largo=parseInt(largo);
+
 	ancho=document.getElementById('Ancho').value;
-	ancho=parseInt(ancho);
-	resultado=(largo*2+ancho*2);
+
+	cantidadCe=(largo*cemento)*ancho;
+	
+	cantidadCa=(largo*cal)*ancho;
+	
+	alert("se necesitan " + cantidadCa +" bolsas de cal y "+cantidadCe+" bolsas de cemento");
 }
