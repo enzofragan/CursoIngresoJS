@@ -7,9 +7,11 @@ function Mostrar()
 
 	edad=document.getElementById('edad').value;
 	estado=document.getElementById('estadoCivil').value;
+	//console.log("hola");
 
-	if(edad<18 && estado!=="Soltero")
+	if(edad<18 && estado!="Soltero")
 	{
+		console.log("NO HACER NADA");
 	}
 	else
 	{
