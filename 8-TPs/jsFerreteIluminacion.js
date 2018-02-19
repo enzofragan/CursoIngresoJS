@@ -19,12 +19,88 @@ function CalcularPrecio ()
 
  	lamparas=35;
  	cantidad=document.getElementById('Cantidad').value;
+ 	cantidad=parseInt(cantidad);
  	marca=document.getElementById('Marca').value;
  	precioDescuento=document.getElementById('precioDescuento').value;
  	precio=cantidad*lamparas;
 
+ 	switch (marca)
+ 	{
+ 		case "ArgentinaLuz":
+ 		{
+ 			if (cantidad>5)
+ 			{
+ 				descuento=precio*0.50;
+ 				document.getElementById('precioDescuento').value=descuento;
+ 			}
+ 			else if (cantidad==5)
+ 				{
+ 					descuento=precio*0.40;
+ 					document.getElementById('precioDescuento').value=descuento;
+ 				}
+ 				else if (cantidad==4)
+ 					{
+ 						descuento=precio*0.25;
+ 						document.getElementById('precioDescuento').value=descuento;
+ 					}
+ 					else if (cantidad==3)
+ 						{
+ 							descuento=precio*0.15;
+ 							document.getElementById('precioDescuento').value=descuento;
+ 						}
+ 		}
+ 			break;
+ 		case "FelipeLamparas":
+ 		{
+ 			if (cantidad>5)
+ 			{
+ 				descuento=precio*0.50;
+ 				document.getElementById('precioDescuento').value=descuento;
+ 			}
+ 			else if (cantidad==5)
+ 				{
+ 					descuento=precio*0.30;
+ 					document.getElementById('precioDescuento').value=descuento;
+ 				}
+ 				else if (cantidad==4)
+ 					{
+ 						descuento=precio*0.25;
+ 						document.getElementById('precioDescuento').value=descuento;
+ 					}
+ 					else if (cantidad==3)
+ 						{
+ 							descuento=precio*0.10;
+ 							document.getElementById('precioDescuento').value=descuento;
+ 						}
+ 		}
+ 			break;
+ 		default:
+ 		{
+ 			if (cantidad>5)
+ 			{
+ 				descuento=precio*0.50;
+ 				document.getElementById('precioDescuento').value=descuento;
+ 			}
+ 			else if (cantidad==5)
+ 				{
+ 					descuento=precio*0.30;
+ 					document.getElementById('precioDescuento').value=descuento;
+ 				}
+ 				else if (cantidad==4)
+ 					{
+ 						descuento=precio*0.20;
+ 						document.getElementById('precioDescuento').value=descuento;
+ 					}
+ 					else if (cantidad==3)
+ 						{
+ 							descuento=precio*0.05;
+ 							document.getElementById('precioDescuento').value=descuento;
+ 						}
+ 		}
+ 	}
+ 	
 
- 	if (cantidad>5)
+ 	/*if (cantidad>5)
  	{
  		descuento=precio*0.50;
  		document.getElementById('precioDescuento').value=descuento;
@@ -84,7 +160,7 @@ function CalcularPrecio ()
  				}
  			}
  		}
- 	}
+ 	}*/
  	if (precioDescuento>120)
  	{
  		descuento=precioDescuento*1.1;
