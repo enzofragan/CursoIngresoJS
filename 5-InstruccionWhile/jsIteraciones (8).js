@@ -19,7 +19,7 @@ function Mostrar()
 		}
 		if (numero<0)
 		{
-			negativo=negativo*numero
+			negativo=negativo*numero;
 		}
 		respuesta=prompt("ingrese si para continuar");
 	}
